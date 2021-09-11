@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    {% extends 'doctor/base.html' %}
+    {% block info %}
+
+   
+    <form method="post" enctype="multipart/form-data"> {% csrf_token %}
+       
+        <h2>Doctor Registration/Login</h2>
+        {{form.as_p}}
+        <!-- {{form.non_field_errors}}
+
+        {% for field in form %}
+        <div>
+          {{field.label_tag}} {{field}} 
+           {% for error in field.errors %}
+              <span class="errorlist">{{error}}</span>
+           {% endfor %}
+        </div>
+        {% endfor %} -->
+        
+        
+        <br><input type="submit" value="SIGN IN">    
+    </form>
+    
+    {% endblock %}
+</html>

@@ -10,7 +10,7 @@
   {% if error %}
     <h2>{{ error }}</h2>
   {% endif %}
-  <form action="/patient/create-account/" method="POST" enctype="multipart/form-data" autocomplete="off">
+  <form action="/patient/create-account/" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form }}
     <button>Submit</button>
