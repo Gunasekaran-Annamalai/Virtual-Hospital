@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    {% extends 'doctor/base.html' %}
+    {% block info %}
+
+    <h2>Login</h2>
+    {% for message in messages %}
+        <p class='errorlist'>{{message}}</p>
+    {% endfor %}
+    <form  method="post" enctype="multipart/form-data"> {% csrf_token %}
+       
+        
+        {{form.as_p}}
+        
+        
+        <br><input type="submit" value="LOGIN">    
+    </form>
+
+    
+    {% endblock %}
+</html>
